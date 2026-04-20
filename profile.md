@@ -14,7 +14,7 @@
 - EC2, RDS 스케줄러 적용(비용 절감 목적)
   - AWS Instance Scheduler/CloudFormation/EventBridge/Lambda/DynamoDB
 - CloudFront, S3 구성 자동 퍼지 설정(캐싱 퍼지 목적)
-  - CloudFront, Lambda
+  - 기존 단순 Lambda 자동 퍼지 구성에서 SQS(DLQ), CloudWatch, Lambda 구성하여 퍼지 누락 개선(알람 수신 및 DLQ 드라이브) 
 - Endpoint 구성(보안 및 비용 절감 목적)
   - S3, ECR, SSM Endpoint
 
@@ -63,8 +63,15 @@
 
 # 컨테이너 환경 운영
 - kOps 활용하여 AWS 리소스 기반 K8s 설치 및 운영
+  - AWS 연동 및 S3, Route 53 를 통한 Kubernetes Cluster 생성
+    - External DNS, Cluster Autoscaler, Docker Secret, Dashboard, Monitoring(Prometheus&Grafana), Ingress-controller(Kong, Nginx) 등 필요에 따른 서비스 추가 설치
+    - CI/CD(GitLab, Jenkins)
 - ECS 리소스 생성 및 운영
+  - CI/CD(GitLab, Jenkins)
+  - 시스템 리소스, 트래픽 대비 AutoScale 구성
 - Docker Swarm 리소스 생성 및 운영
+  - CI/CD(GitLab, Jenkins or GitLab CI)
+  - 시스템 리소스, 트래픽 대비 AutoScale 구성
 - EKS 리소스 구성 검증(AWS Workshop 기준)
-  - Cloud9, VPC(Custom), Add-ons(Image Builder, ALBIngress, Cloudwatch, Cluster Autoscaler, EBS)
-  - CI/CD(GitLab, ArgoCD), Dashboard
+  - Cloud9, VPC(Custom), Add-ons(Image Builder, ALBIngress, Cloudwatch, Cluster Autoscaler, EBS), Dashboard
+  - CI/CD(GitLab, ArgoCD)
