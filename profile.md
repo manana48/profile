@@ -1,5 +1,6 @@
 # 인프라 운영
 - 외부 서비스 인프라 아키텍처 구성(CloudFront, WAF, ALB, EC2)
+  - CloudFront VPC 오리진 도입으로 (Internal)ALB 리소스 생성하여 보안 강화 및 비용 절감
 - EC2 리소스 생성 및 관리(Amazon Linux 2023)
 - RDS 리소스 생성 및 관리(Aurora(MySQL Compatible), MySQL)
 - ElastiCache(Redis OSS 캐시, Valkey 캐시), DocumentDB 리소스 생성 및 관리
