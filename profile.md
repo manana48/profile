@@ -5,7 +5,7 @@
 - RDS 리소스 생성 및 관리(Aurora(MySQL Compatible), MySQL)
 - ElastiCache(Redis OSS 캐시, Valkey 캐시), DocumentDB 리소스 생성 및 관리
 - 그 외 필요 리소스 생성 및 관리
-  - SES(반송률 관리 목적), Rekognition(부적절한 이미지/영상 필터 목적), MSK(Kafka Cluster), OpenSearch
+  - SES(서비스 메일 발송 목적), Rekognition(부적절한 이미지/영상 필터 목적), MSK(Kafka Cluster), OpenSearch
 - Apache, Nginx 리소스 생성 및 관리  
   - Apache, Nginx 튜닝 최적화
   - Nginx Reverse Proxy 설정 및 관리(uWSGI, Websocket 등)
